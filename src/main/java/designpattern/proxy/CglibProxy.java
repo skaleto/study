@@ -1,5 +1,6 @@
 package designpattern.proxy;
 
+import org.springframework.cglib.core.DebuggingClassWriter;
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
@@ -26,17 +27,27 @@ public class CglibProxy implements MethodInterceptor {
         return enhancer.create();
     }
 
+    /**
+     * @param o           cglib生成的代理对象
+     * @param method      被代理的方法
+     * @param objects     方法入参
+     * @param methodProxy 代理方法
+     * @return
+     * @throws Throwable
+     */
     @Override
     public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
 
-        Object value = method.invoke(obj, objects);
-//        Object value=methodProxy.invokeSuper(obj,objects);
+//        Object value = method.invoke(obj, objects);
+        Object value = methodProxy.invokeSuper(o, objects);
 
         return value;
     }
 
     public static void main(String[] args) {
-        GamePlayer playerProxy = (GamePlayer) new CglibProxy(new GamePlayer("name")).getInstance();
+        //代理类class文件存入本地磁盘
+        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "E:\\iflytektest");
+        GamePlayer playerProxy = (GamePlayer) new CglibProxy(new GamePlayer()).getInstance();
         playerProxy.login("", "");
 
     }
