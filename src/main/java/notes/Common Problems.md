@@ -3,7 +3,7 @@ Common Problems
 Java基础知识相关
 
     1.Exception和Error的区别
-    2.HashMap、HashTable和TreeMap
+    2.HashMap、HashTable和TreeMap源码，实现原理，JDK8以后对HashMap做了怎样的优化
     3.什么情况会发生死锁，如何避免死锁
     4.并发包提供了哪些线程池
     5.如何监控和诊断JVM堆内外层的使用
