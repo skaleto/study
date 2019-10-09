@@ -10,5 +10,8 @@ public class TestMap {
 
     public static void main(String[] args) {
 //        TreeMap
+        System.out.println("1234");
+        String a="sad";
+        a.intern();
     }
 }

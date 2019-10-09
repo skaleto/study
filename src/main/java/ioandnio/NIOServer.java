@@ -3,10 +3,7 @@ package ioandnio;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
-import java.nio.channels.SelectionKey;
-import java.nio.channels.Selector;
-import java.nio.channels.ServerSocketChannel;
-import java.nio.channels.SocketChannel;
+import java.nio.channels.*;
 import java.util.Iterator;
 
 /**
@@ -28,8 +25,19 @@ public class NIOServer {
              ServerSocketChannel listenChannel = ServerSocketChannel.open()) {
 
             listenChannel.bind(new InetSocketAddress(9999));
+            //channel需要设置为非阻塞模式，而FileChannel没有configureBlocking方法，无法设置为非阻塞
             listenChannel.configureBlocking(false);
+            /*
+             * selector可以注册多种事件
+             * OP_CONNECT:监听socket通道的连接就绪
+             * OP_ACCEPT:监听接受就绪事件
+             * OP_WRITE:监听写就绪事件
+             * OP_READ:监听读就绪事件
+             * 如果需要监听多种事件，则例如 OP_CONNECT|OP_ACCEPT|OP_WRITE 使用位或操作将三种事件组合起来
+             */
             listenChannel.register(selector, SelectionKey.OP_ACCEPT);
+            //也可以在注册的时候附带上一个用于标识的对象
+            //listenChannel.register(selector,SelectionKey.OP_ACCEPT,new Object());
 
             ByteBuffer buffer = ByteBuffer.allocate(1024);
             while (true) {
@@ -78,15 +86,13 @@ public class NIOServer {
                             }
                         }
                     }
-
+                    //处理完事件后需要将该键集删去
                     selectionKeys.remove();
                 }
             }
 
-
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }
