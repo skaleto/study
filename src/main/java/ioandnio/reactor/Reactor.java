@@ -30,15 +30,13 @@ public class Reactor implements Runnable {
 
     }
 
+    public static void main(String[] args) throws IOException {
+        new Reactor(9999).run();
+    }
+
 
     /**
-     * When an object implementing interface <code>Runnable</code> is used
-     * to create a thread, starting the thread causes the object's
-     * <code>run</code> method to be called in that separately executing
-     * thread.
-     * <p>
-     * The general contract of the method <code>run</code> is that it may
-     * take any action whatsoever.
+     * 死循环检查是否有通道有监听的消息，这里监听的是就绪事件
      *
      * @see Thread#run()
      */
@@ -47,10 +45,12 @@ public class Reactor implements Runnable {
         try {
             while (!Thread.interrupted()) {
                 selector.select();
-                Iterator it=selector.selectedKeys().iterator();
-                while (it.hasNext()){
-
+                Iterator it = selector.selectedKeys().iterator();
+                while (it.hasNext()) {
+                    //将消息分发至每个有消息的通道
+                    dispatch((SelectionKey) it.next());
                 }
+                selector.selectedKeys().clear();
 
             }
         } catch (IOException e) {
@@ -59,19 +59,24 @@ public class Reactor implements Runnable {
     }
 
 
-    private void dispatch(SelectionKey key){
-        Runnable runnable=(Runnable) key.attachment();
-        runnable!=null?runnable.run():return;
+    private void dispatch(SelectionKey key) {
+        Runnable runnable = (Runnable) key.attachment();
+        if (runnable != null) {
+            runnable.run();
+        }
     }
 
-    // inner class
+    //这里为什么要把Acceptor设置为开启一个新的线程去执行？
+    //如果不是异步执行的话，dispatch就会阻塞直到这个handler执行完毕
     class Acceptor implements Runnable {
         public void run() {
             try {
                 SocketChannel channel = serverSocketChannel.accept();
-//                if (channel != null)
-//                    new Handler(selector, channel);
-            } catch (IOException ex) { /* ... */ }
+                if (channel != null)
+                    new Handler(selector, channel);
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
         }
     }
 
