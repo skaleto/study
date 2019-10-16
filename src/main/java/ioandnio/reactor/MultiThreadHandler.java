@@ -95,17 +95,25 @@ public class MultiThreadHandler implements Runnable {
         }
     }
 
-    synchronized void processAndHandOff() {
-        process();
-        state = SENDING;
-        // or rebind attachment
-        //process完,开始等待write就绪
-        sk.interestOps(SelectionKey.OP_WRITE);
-    }
+//    synchronized void processAndHandOff() {
+//        process();
+//        state = SENDING;
+//        // or rebind attachment
+//        //process完,开始等待write就绪
+//        sk.interestOps(SelectionKey.OP_WRITE);
+//    }
 
     class Processer implements Runnable {
         public void run() {
             processAndHandOff();
+        }
+
+        synchronized void processAndHandOff() {
+            process();
+            state = SENDING;
+            // or rebind attachment
+            //process完,开始等待write就绪
+            sk.interestOps(SelectionKey.OP_WRITE);
         }
     }
 }
