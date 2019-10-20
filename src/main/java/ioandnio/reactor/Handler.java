@@ -1,7 +1,5 @@
 package ioandnio.reactor;
 
-import com.alibaba.fastjson.JSON;
-
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
@@ -37,9 +35,6 @@ public class Handler implements Runnable {
         sk.interestOps(SelectionKey.OP_READ);
         //wakeup用于唤醒阻塞在select()方法上的线程
         selector.wakeup();
-
-
-        JSON.parse()
 
     }
 

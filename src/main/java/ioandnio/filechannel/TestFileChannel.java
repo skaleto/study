@@ -1,8 +1,6 @@
 package ioandnio.filechannel;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.RandomAccessFile;
+import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
@@ -10,7 +8,8 @@ public class TestFileChannel {
 
     public static void main(String[] args) throws IOException {
         TestFileChannel testFileChannel = new TestFileChannel();
-        testFileChannel.testFileChannel();
+//        testFileChannel.testFileChannel();
+        testFileChannel.copyFile();
     }
 
 
@@ -32,5 +31,22 @@ public class TestFileChannel {
             }
         }
 
+    }
+
+    public void copyFile() throws IOException {
+        //准备channel
+        try (FileChannel sourceChannel = new FileInputStream(new File("/Users/yaoyibin/mytest/nio/source.rtf")).getChannel();
+             FileChannel destChannel = new FileOutputStream(new File("/Users/yaoyibin/mytest/nio/dest.rtf")).getChannel()) {
+
+            //准备buffer
+            ByteBuffer buf = ByteBuffer.allocate(1024);
+            while (sourceChannel.read(buf) != -1) {
+                //切换到读模式
+                buf.flip();
+                destChannel.write(buf);
+                buf.clear();
+            }
+            destChannel.force(true);
+        }
     }
 }
