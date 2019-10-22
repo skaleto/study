@@ -21,10 +21,11 @@ public class NIOServer {
     }
 
     public void createServer() {
+        //打开选择器，打开channel
         try (Selector selector = Selector.open();
              ServerSocketChannel listenChannel = ServerSocketChannel.open()) {
-
-            listenChannel.bind(new InetSocketAddress(9999));
+            //将channel绑定至9999端口
+            listenChannel.bind(new InetSocketAddress(9000));
             //channel需要设置为非阻塞模式，而FileChannel没有configureBlocking方法，无法设置为非阻塞
             listenChannel.configureBlocking(false);
             /*
@@ -33,7 +34,8 @@ public class NIOServer {
              * OP_ACCEPT:监听接受就绪事件
              * OP_WRITE:监听写就绪事件
              * OP_READ:监听读就绪事件
-             * 如果需要监听多种事件，则例如 OP_CONNECT|OP_ACCEPT|OP_WRITE 使用位或操作将三种事件组合起来
+             * 如果需要监听多种事件，则例如 OP_CONNECT|OP_ACCEPT|OP_WRITE 使用位或操作将三种事件组合起来，
+             * 但是要注意的是，不同类型的channel，同时组合的事件是有不同的，例如ServerSocketChannel，就仅支持注册ACCEPT事件，而SocketChannel则支持多种事件
              */
             listenChannel.register(selector, SelectionKey.OP_ACCEPT);
             //也可以在注册的时候附带上一个用于标识的对象

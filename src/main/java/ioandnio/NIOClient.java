@@ -1,9 +1,11 @@
 package ioandnio;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
+import java.net.InetSocketAddress;
 import java.net.Socket;
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
+import java.nio.channels.SocketChannel;
 
 /**
  * @author : ybyao
@@ -20,17 +22,24 @@ public class NIOClient {
     }
 
     public void startClient() {
-        try (Socket socket = new Socket("localhost", 9999);
-             InputStream is = socket.getInputStream();
-             OutputStream os = socket.getOutputStream()) {
+        try (SocketChannel channel = SocketChannel.open()) {
+            channel.configureBlocking(false);
+            //注意这里要用connect，因为是客户端
+            channel.connect(new InetSocketAddress(9000));
 
-            os.write("Hello\0".getBytes());
+            while(!channel.finishConnect()){
 
+            }
 
-            // 读取服务端发来的数据
-            int b;
-            while ((b = is.read()) != 0) {
-                System.out.print((char) b);
+            ByteBuffer buffer = ByteBuffer.allocate(1024);
+
+            FileChannel fileChannel = new FileInputStream(new File("/Users/yaoyibin/mytest/nio/source.rtf")).getChannel();
+
+            while (fileChannel.read(buffer) > 0) {
+                //这里需要将默认的写模式切换到读模式供channel读取并写入
+                buffer.flip();
+                channel.write(buffer);
+                buffer.clear();
             }
 
         } catch (IOException e) {
