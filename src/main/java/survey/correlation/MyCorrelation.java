@@ -1,9 +1,13 @@
 package survey.correlation;
 
+import javafx.embed.swt.SWTFXUtils;
 import survey.LittleEndian;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 /**
  * @author : ybyao
@@ -47,11 +51,28 @@ public class MyCorrelation {
                 }
             }
 
-            calculate(source, windowNum);
+            List<CorrResult> results = calculate(source, windowNum);
+            results.sort(Comparator.comparingDouble(CorrResult::getCos));
+
+            int closerMicIndex = 0;
+            if (results.get(results.size() - 1).getMatrixOffset() > 0) {
+                closerMicIndex = 1;
+            } else if (results.get(results.size() - 1).getMatrixOffset() == 0) {
+                closerMicIndex = -1;
+            }
+
+            System.err.println("Audio source close to mic: " + closerMicIndex);
+
+            double sampleNum = (double) results.get(results.size() - 1).getMatrixOffset();
+            double theta = Math.acos((sampleNum / info.getSampleRate() * AUDIO_SPEED) / micDistance);
+            theta = theta * 180 / Math.PI;
+
+            System.err.println("Probable angle: " + theta + "°");
         }
     }
 
-    public void calculate(int[][] source, int windowNum){
+    public List<CorrResult> calculate(int[][] source, int windowNum) {
+        List<CorrResult> res = new ArrayList<>();
         for (int i = -windowNum; i <= windowNum; i++) {
             double innerProduct = 0;
             double vectorNormA = 0;
@@ -64,8 +85,14 @@ public class MyCorrelation {
 
             double cos = innerProduct / (Math.sqrt(vectorNormA) * Math.sqrt(vectorNormB));
 
-            System.out.println("Matrix offset：" + i + ", inner: " + innerProduct + ", Cos：" + cos);
+            res.add(new CorrResult()
+                    .setMatrixOffset(i)
+                    .setInner(innerProduct)
+                    .setCos(cos));
+
         }
+
+        return res;
     }
 
     public AudioInfo getAudioInfo(String filePath) throws IOException {
@@ -103,7 +130,7 @@ public class MyCorrelation {
     }
 
     public static void main(String[] args) throws IOException {
-        new MyCorrelation().start(730, 770, 100, "C:\\Users\\iflyrec\\Documents\\WeChat Files\\yyb-weixin\\FileStorage\\File\\2019-10\\audio\\audio\\channel-0.wav", "C:\\Users\\iflyrec\\Documents\\WeChat Files\\yyb-weixin\\FileStorage\\File\\2019-10\\audio\\audio\\channel-3.wav");
+        new MyCorrelation().start(1704, 1714, 100, "C:\\Users\\iflyrec\\Documents\\WeChat Files\\yyb-weixin\\FileStorage\\File\\2019-10\\audio\\audio\\channel-0.wav", "C:\\Users\\iflyrec\\Documents\\WeChat Files\\yyb-weixin\\FileStorage\\File\\2019-10\\audio\\audio\\channel-3.wav");
 //        new MyCorrelation().getAudioInfo("C:\\Users\\iflyrec\\Documents\\WeChat Files\\yyb-weixin\\FileStorage\\File\\2019-10\\audio\\audio\\channel-0.wav");
 
     }
