@@ -1,6 +1,5 @@
 package survey.correlation;
 
-import javafx.embed.swt.SWTFXUtils;
 import survey.LittleEndian;
 
 import java.io.IOException;
@@ -23,15 +22,15 @@ public class MyCorrelation {
     private static final int AUDIO_SPEED = 340000;
 
     /**
-     * @param filePath    文件位置
-     * @param start       声音开始时间点(ms)
-     * @param end         声音结束时间点(ms)
-     * @param micDistance 麦克风间距(mm)
+     * @param filePath   文件位置
+     * @param start      声音开始时间点(ms)
+     * @param end        声音结束时间点(ms)
+     * @param micSpacing 麦克风间距(mm)
      */
-    public void start(double start, double end, double micDistance, String... filePath) throws IOException {
+    public void start(double start, double end, double micSpacing, String... filePath) throws IOException {
         AudioInfo info = getAudioInfo(filePath[0]);
         //将音频数据前后移动的窗口大小
-        int windowNum = (int) (Math.ceil((micDistance / AUDIO_SPEED) * info.getSampleRate()) + 1);
+        int windowNum = (int) (Math.ceil((micSpacing / AUDIO_SPEED) * info.getSampleRate()) + 1);
         int startSampleIndex = (int) Math.floor(start / 1000 * info.getSampleRate()) - windowNum;
         int endSampleIndex = (int) Math.ceil(end / 1000 * info.getSampleRate()) + windowNum;
         int length = endSampleIndex - startSampleIndex;
@@ -51,27 +50,61 @@ public class MyCorrelation {
                 }
             }
 
-            List<CorrResult> results = calculate(source, windowNum);
-            results.sort(Comparator.comparingDouble(CorrResult::getCos));
+            //声达时间差计算
+            List<CorrResult> TDOA_RES = tdoa(source, windowNum);
+            TDOA_RES.sort(Comparator.comparingDouble(CorrResult::getCos));
 
+            //波束形成计算
+            List<CorrResult> BEAMFORMING_RES = beamForming(source, micSpacing, info.getSampleRate());
+            BEAMFORMING_RES.sort(Comparator.comparingDouble(CorrResult::getCos));
+
+            System.out.println(BEAMFORMING_RES.get(BEAMFORMING_RES.size() - 1).getAngle() * 180 / Math.PI);
+
+
+            /*
+             * Result...
+             */
             int closerMicIndex = 0;
-            if (results.get(results.size() - 1).getMatrixOffset() > 0) {
+            if (TDOA_RES.get(TDOA_RES.size() - 1).getMatrixOffset() > 0) {
                 closerMicIndex = 1;
-            } else if (results.get(results.size() - 1).getMatrixOffset() == 0) {
+            } else if (TDOA_RES.get(TDOA_RES.size() - 1).getMatrixOffset() == 0) {
                 closerMicIndex = -1;
             }
 
             System.err.println("Audio source close to mic: " + closerMicIndex);
 
-            double sampleNum = (double) results.get(results.size() - 1).getMatrixOffset();
-            double theta = Math.acos((sampleNum / info.getSampleRate() * AUDIO_SPEED) / micDistance);
-            theta = theta * 180 / Math.PI;
+            double sampleNum = (double) TDOA_RES.get(TDOA_RES.size() - 1).getMatrixOffset();
+            double theta_pi = Math.acos((sampleNum / info.getSampleRate() * AUDIO_SPEED) / micSpacing);
+            double theta = theta_pi * 180 / Math.PI;
 
             System.err.println("Probable angle: " + theta + "°");
+
+            plot(micSpacing, 100, theta_pi, 300);
         }
     }
 
-    public List<CorrResult> calculate(int[][] source, int windowNum) {
+    /**
+     * 以双麦克风M1,M2中点为原点，在麦克风平面内垂直于直线M1M2的直线为x轴，M1M2直线为y轴，垂直于麦克风平面的直线为z轴建立坐标系
+     *
+     * @param micSpacing 双麦克风间距
+     * @param planeDis   平行于麦克风平面的垂直距离
+     * @param theta      音源与较远麦克风的夹角
+     * @param sourceDis  音源与较远麦克风的直线距离
+     */
+    public void plot(double micSpacing, double planeDis, double theta, double sourceDis) {
+
+        double source_X = Math.sqrt(Math.pow(sourceDis * Math.sin(theta), 2) - Math.pow(planeDis, 2));
+
+        double source_Y = sourceDis * Math.cos(theta) - micSpacing / 2;
+
+        double source_Z = planeDis;
+
+        System.err.println("Audio source is at [ " + source_X + "," + source_Y + "," + source_Z + "]");
+        System.err.println("             or at [ " + -source_X + "," + source_Y + "," + source_Z + "]");
+
+    }
+
+    public List<CorrResult> tdoa(int[][] source, int windowNum) {
         List<CorrResult> res = new ArrayList<>();
         for (int i = -windowNum; i <= windowNum; i++) {
             double innerProduct = 0;
@@ -85,11 +118,50 @@ public class MyCorrelation {
 
             double cos = innerProduct / (Math.sqrt(vectorNormA) * Math.sqrt(vectorNormB));
 
+            System.out.println("Offset：" + i + " inner: " + innerProduct + " cos: " + cos);
+
             res.add(new CorrResult()
                     .setMatrixOffset(i)
                     .setInner(innerProduct)
                     .setCos(cos));
 
+        }
+
+        return res;
+    }
+
+    /**
+     * 假定夹角小于90度
+     *
+     * @param source
+     * @param micSpacing
+     * @return
+     */
+    public List<CorrResult> beamForming(int[][] source, double micSpacing, double sampleRate) {
+        List<CorrResult> res = new ArrayList<>();
+        for (double i = 0; i <= Math.PI / 2; i += Math.PI / 180) {
+            double delta_t = micSpacing * Math.cos(i) / AUDIO_SPEED;
+            int sampleNum = (int) Math.floor(delta_t * sampleRate);
+
+            double innerProduct = 0;
+            double vectorNormA = 0;
+            double vectorNormB = 0;
+
+            for (int j = sampleNum; j < source[0].length - sampleNum; j++) {
+                innerProduct += source[0][j] * source[1][j - sampleNum];
+                vectorNormA += Math.pow(source[0][j], 2);
+                vectorNormB += Math.pow(source[1][j - sampleNum], 2);
+            }
+
+            double cos = innerProduct / (Math.sqrt(vectorNormA) * Math.sqrt(vectorNormB));
+
+            System.out.println("angle：" + i + " inner: " + innerProduct + " cos: " + cos);
+
+
+            res.add(new CorrResult()
+                    .setAngle(i)
+                    .setInner(innerProduct)
+                    .setCos(cos));
         }
 
         return res;
@@ -130,7 +202,7 @@ public class MyCorrelation {
     }
 
     public static void main(String[] args) throws IOException {
-        new MyCorrelation().start(1704, 1714, 100, "C:\\Users\\iflyrec\\Documents\\WeChat Files\\yyb-weixin\\FileStorage\\File\\2019-10\\audio\\audio\\channel-0.wav", "C:\\Users\\iflyrec\\Documents\\WeChat Files\\yyb-weixin\\FileStorage\\File\\2019-10\\audio\\audio\\channel-3.wav");
+        new MyCorrelation().start(1658, 1774, 100, "C:\\Users\\iflyrec\\Documents\\WeChat Files\\yyb-weixin\\FileStorage\\File\\2019-10\\audio\\audio\\channel-0.wav", "C:\\Users\\iflyrec\\Documents\\WeChat Files\\yyb-weixin\\FileStorage\\File\\2019-10\\audio\\audio\\channel-3.wav");
 //        new MyCorrelation().getAudioInfo("C:\\Users\\iflyrec\\Documents\\WeChat Files\\yyb-weixin\\FileStorage\\File\\2019-10\\audio\\audio\\channel-0.wav");
 
     }
