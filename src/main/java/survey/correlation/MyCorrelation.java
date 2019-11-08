@@ -2,11 +2,13 @@ package survey.correlation;
 
 import survey.LittleEndian;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.concurrent.locks.Lock;
 
 /**
  * @author : ybyao
@@ -15,6 +17,7 @@ import java.util.List;
 public class MyCorrelation {
 
     private int[][] source = null;
+
 
     /**
      * 声速(mm/s)
@@ -33,9 +36,11 @@ public class MyCorrelation {
         int windowNum = (int) (Math.ceil((micSpacing / AUDIO_SPEED) * info.getSampleRate()) + 1);
         int startSampleIndex = (int) Math.floor(start / 1000 * info.getSampleRate()) - windowNum;
         int endSampleIndex = (int) Math.ceil(end / 1000 * info.getSampleRate()) + windowNum;
+        startSampleIndex = 0;
+        endSampleIndex = 16000;
         int length = endSampleIndex - startSampleIndex;
         //先只处理16bit
-        if (info.getBitsPerSample() == 16 && endSampleIndex > startSampleIndex && startSampleIndex > 0) {
+        if (info.getBitsPerSample() == 16 && endSampleIndex > startSampleIndex) {
             source = new int[2][endSampleIndex - startSampleIndex];
             for (int count = 0; count < 2; count++) {
 
@@ -110,7 +115,7 @@ public class MyCorrelation {
             double innerProduct = 0;
             double vectorNormA = 0;
             double vectorNormB = 0;
-            for (int j = windowNum; j < source[0].length - windowNum; j++) {
+            for (int j = Math.abs(i); j < source[0].length - Math.abs(i); j++) {
                 innerProduct += source[0][j] * source[1][j - i];
                 vectorNormA += Math.pow(source[0][j], 2);
                 vectorNormB += Math.pow(source[1][j - i], 2);
@@ -202,8 +207,31 @@ public class MyCorrelation {
     }
 
     public static void main(String[] args) throws IOException {
-        new MyCorrelation().start(1658, 1774, 100, "C:\\Users\\iflyrec\\Documents\\WeChat Files\\yyb-weixin\\FileStorage\\File\\2019-10\\audio\\audio\\channel-0.wav", "C:\\Users\\iflyrec\\Documents\\WeChat Files\\yyb-weixin\\FileStorage\\File\\2019-10\\audio\\audio\\channel-3.wav");
+        new MyCorrelation().start(0, 1000, 100, "C:\\Users\\iflyrec\\Documents\\WeChat Files\\yyb-weixin\\FileStorage\\File\\2019-10\\audio\\audio\\channel-0.wav", "C:\\Users\\iflyrec\\Documents\\WeChat Files\\yyb-weixin\\FileStorage\\File\\2019-10\\audio\\audio\\channel-3.wav");
 //        new MyCorrelation().getAudioInfo("C:\\Users\\iflyrec\\Documents\\WeChat Files\\yyb-weixin\\FileStorage\\File\\2019-10\\audio\\audio\\channel-0.wav");
 
+//        new MyCorrelation().test("C:\\Users\\iflyrec\\Documents\\WeChat Files\\yyb-weixin\\FileStorage\\File\\2019-10\\audio\\audio\\channel-0.wav");
+
+//        System.out.println(getNumber(new byte[]{(byte) 0x61, (byte) 0xff}));
+    }
+
+    private void test(String filePath) throws IOException {
+        try (RandomAccessFile file = new RandomAccessFile(filePath, "r")) {
+            //跳过44字节的头，以及开始采样点前的字节
+            file.seek(44);
+            byte[] buf = new byte[1024];
+            file.read(buf);
+
+            int[] temp = new int[512];
+
+            for (int i = 0; i < 512; i += 2) {
+                byte[] t = new byte[2];
+                t[0] = buf[i];
+                t[1] = buf[i + 1];
+                temp[i / 2] = getNumber(t);
+            }
+
+            System.out.println(buf.length);
+        }
     }
 }
