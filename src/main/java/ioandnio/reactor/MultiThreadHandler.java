@@ -38,6 +38,7 @@ public class MultiThreadHandler implements Runnable {
         //这里不同于前面的serversocketchannel，serversocketchannel是用来监听socket就绪状态的，而这里的socketchannel是用来传输数据的
         sk.interestOps(SelectionKey.OP_READ);
         //wakeup用于唤醒阻塞在select()方法上的线程
+        //为什么这里要唤醒呢？？？因为此时已经完成了accept之后对应的处理，如果正好在此时有线程阻塞在select上，那么它将永远得不到accept的响应了，因此需要让当前正在阻塞的线程返回
         selector.wakeup();
 
     }
