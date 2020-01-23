@@ -62,12 +62,11 @@ public class Reactor implements Runnable {
     private void dispatch(SelectionKey key) {
         Runnable runnable = (Runnable) key.attachment();
         if (runnable != null) {
+            //这里用的是runnable.run()，所以是直接调用run方法，并没有开启新的线程
             runnable.run();
         }
     }
 
-    //这里为什么要把Acceptor设置为开启一个新的线程去执行？
-    //如果不是异步执行的话，dispatch就会阻塞直到这个handler执行完毕
     class Acceptor implements Runnable {
         public void run() {
             try {

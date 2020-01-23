@@ -45,7 +45,7 @@ public class NettyClient {
             ChannelFuture channelFuture = bootstrap.connect("localhost", 9999).sync();
             System.out.println(Thread.currentThread().getName() + ",客户端发起异步连接..........");
 
-            /**等待客户端链路关闭*/
+            //等待客户端链路关闭，当然也可以使用异步的方式，并使用future来获得异步处理结果
             channelFuture.channel().closeFuture().sync();
         } catch (InterruptedException e) {
             e.printStackTrace();

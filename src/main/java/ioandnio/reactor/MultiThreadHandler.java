@@ -66,6 +66,7 @@ public class MultiThreadHandler implements Runnable {
     /**
      * @see Thread#run()
      */
+    //TODO 这个地方的代码其实不太优雅，看起来有点乱
     @Override
     public void run() {
         try {
