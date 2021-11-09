@@ -1,256 +1,326 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6070e10-2b80-44d6-be7e-d442daae81bd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../iflytektest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../iflytektest/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a6070e10-2b80-44d6-be7e-d442daae81bd" name="Default" comment="2019年10月10日01:29:41">
+      <change afterPath="$PROJECT_DIR$/kafka/kafka-producer/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/kafka-producer/src/main/java/com/skaleto/kafka/ApplicationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/kafka-producer/src/main/java/com/skaleto/kafka/KafkaConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/kafka-producer/src/main/java/com/skaleto/kafka/controller/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/kafka-producer/src/main/java/com/skaleto/kafka/service/KafkaConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/kafka-producer/src/main/java/com/skaleto/kafka/service/KafkaProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/kafka-producer/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/ThingsApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/collection/VectorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/collection/WeakHashMapTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/factory/abstractfactory/IFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/factory/abstractfactory/TankFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/factory/factorymethod/Factory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/ioandnio/NIOClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/ioandnio/reactor/EventHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/ioandnio/reactor/multithread/MultiThreadMainReactor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/ioandnio/reactor/multithread/MultiThreadReactorAcceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/ioandnio/reactor/multithread/MultiThreadReactorInboundHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/ioandnio/reactor/multithread/MultiThreadReactorOutboundHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/ioandnio/reactor/multithread/MultiThreadSubReactor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/ioandnio/reactor/singlethread/SingleThreadReactor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/ioandnio/reactor/singlethread/SingleThreadReactorAcceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/ioandnio/reactor/singlethread/SingleThreadReactorInboundHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/ioandnio/reactor/singlethread/SingleThreadReactorOutboundHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/java100/annotation/TestAPI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/leet/Q11.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/leet/Q125.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/leet/Q20.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/leet/Q283.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/leet/Q394.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/leet/Q42.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/leet/Q70.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/netty/TestByteBuf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/redis/TestRedisson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/spring/A.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/spring/B.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/spring/MyBeanDefinitionRegistryPostProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/spring/TestCirculor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/spring/spring.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/TestThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/drip/DripMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/enginetraining/OpenQA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/enginetraining/Training.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/Business.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/Common.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/Data.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/TestZip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/isvp/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/isvp/TuringISVPTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/isvp/domain/Audio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/isvp/domain/CreateDBBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/isvp/domain/CreateDBRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/isvp/domain/CreateDBResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/isvp/domain/DigitPwdRegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/isvp/domain/DigitPwdVerifyRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/isvp/domain/FreeSayRegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/isvp/domain/FreeSayVerifyRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/isvp/domain/State.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/tts/v2/TuringTTSTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/tts/v2/domain/request/Business.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/tts/v2/domain/request/Common.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/tts/v2/domain/request/Data.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/tts/v2/domain/request/TTSRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/tts/v2/domain/response/Data.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/tts/v2/domain/response/TTSResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/uts/TuringUTSTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/uts/domain/UTSRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/working/DataScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/working/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/working/ScapyUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/working/ScrapyEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/working/TestOpencv.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/threadpool/TestThreadPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/websocket/TestWs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/things/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/sun/proxy/$Proxy0.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/designpattern/proxy/GamePlayer$$EnhancerByCGLIB$$ca732e60$$FastClassByCGLIB$$1593641e.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/designpattern/proxy/GamePlayer$$EnhancerByCGLIB$$ca732e60.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/designpattern/proxy/GamePlayer$$FastClassByCGLIB$$2b70076f.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/springframework/cglib/core/MethodWrapper$MethodWrapperKey$$KeyFactoryByCGLIB$$552be97a.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/springframework/cglib/proxy/Enhancer$EnhancerKey$$KeyFactoryByCGLIB$$4ce19e8f.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/annotation/AnnotationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/annotation/AnnotationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/annotation/CustomAnnotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/annotation/CustomAnnotation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/classloader/ClassloaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/classloader/ClassloaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collection/LinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/collection/LinkedListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datasourcepool/c3p0/C3p0Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/datasourcepool/c3p0/C3p0Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datasourcepool/druid/DruidTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/datasourcepool/druid/DruidTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datasourcepool/tomcatjdbc/TomcatJDBCTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/datasourcepool/tomcatjdbc/TomcatJDBCTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datasourcepool/tradition/JDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/datasourcepool/tradition/JDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/builder/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/builder/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/builder/HumanBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/builder/HumanBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/builder/HumanDirector.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/builder/HumanDirector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/builder/IBuildHuman.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/builder/IBuildHuman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/decorate/DPSDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/decorate/DPSDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/decorate/Decorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/decorate/Decorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/decorate/DecoratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/decorate/DecoratorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/decorate/TankDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/decorate/TankDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/factory/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/factory/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/factory/DPS.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/factory/DPS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/factory/Healer.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/factory/Healer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/factory/SpCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/factory/SpCharacter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/factory/SpTank.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/factory/SpTank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/factory/Tank.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/factory/Tank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/factory/abstractfactory/IFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/factory/abstractfactory/TankFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/factory/factorymethod/DPSFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/factory/factorymethod/DPSFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/factory/factorymethod/Factory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/factory/factorymethod/HealerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/factory/factorymethod/HealerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/factory/factorymethod/TankFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/factory/factorymethod/TankFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/factory/simplefactory/SimpleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/factory/simplefactory/SimpleFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/observer/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/observer/Observer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/observer/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/observer/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/observer/TankObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/observer/TankObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/proxy/CglibProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/proxy/CglibProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/proxy/GamePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/proxy/GamePlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/proxy/IGamePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/proxy/IGamePlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/proxy/JDKProxyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/proxy/JDKProxyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/strategy/IStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/strategy/IStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/strategy/RushStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/strategy/RushStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/strategy/SlowStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/strategy/SlowStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/strategy/StrategyContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/strategy/StrategyContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/template/HumanTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/template/HumanTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/designpattern/template/NewHuman.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/designpattern/template/NewHuman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/info" beforeDir="false" afterPath="$PROJECT_DIR$/kafka/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ioandnio/NIOClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ioandnio/NIOServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/ioandnio/NIOServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ioandnio/datagramchannel/DatagramChannelClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/ioandnio/datagramchannel/DatagramChannelClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ioandnio/datagramchannel/DatagramChannelServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/ioandnio/datagramchannel/DatagramChannelServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ioandnio/filechannel/TestFileChannel.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/ioandnio/filechannel/TestFileChannel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ioandnio/reactor/Handler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ioandnio/reactor/MultiThreadHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ioandnio/reactor/MultiThreadReactor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ioandnio/reactor/Reactor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ioandnio/selector/TestSelector.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/java100/TestConcurrentHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/java100/TestConcurrentHashMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/java100/TestCopyOnWriteList.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/java100/TestCopyOnWriteList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/java100/TestDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/java100/TestDate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/java100/TestGeneric.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/java100/TestGeneric.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/java100/TestLambda.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/java100/TestLambda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/java100/TestOOM.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/java100/TestOOM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/java100/TestSublist.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/java100/TestSublist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/java100/io/TestFileIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/java100/io/TestFileIO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/java100/java8/optional/TestOptional.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/java100/java8/optional/TestOptional.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/java100/java8/stream/TestStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/java100/java8/stream/TestStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/java100/java8/stream/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/java100/java8/stream/entity/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/java100/java8/stream/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/java100/java8/stream/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/java100/java8/stream/entity/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/java100/java8/stream/entity/OrderItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leet/Q2.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/leet/Q2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leet/Q3.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/leet/Q3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leet/Q4.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/leet/Q4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/map/TestMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/map/TestMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/matreial/Java并发编程的艺术.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/matreial/Java并发编程的艺术.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/matreial/SpringApplication.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/matreial/SpringApplication.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/matreial/Spring源码.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/matreial/Spring源码.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/matreial/spring AOP.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/matreial/spring AOP.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/matreial/spring bean创建源码(1).pdf" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/matreial/spring bean创建源码(1).pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/multithread/ConditionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/multithread/ConditionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/multithread/MyMutexLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/multithread/MyMutexLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/multithread/MyReadWriteLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/multithread/MyReadWriteLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/multithread/MySharedLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/multithread/MySharedLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/multithread/ThreadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/multithread/ThreadTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/multithread/executor/ExecutorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/multithread/executor/ExecutorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/multithread/forkjoin/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/multithread/forkjoin/MergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/multithread/forkjoin/SplitAndMergeTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/multithread/forkjoin/SplitAndMergeTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/multithread/guavafuture/GuavaFutureTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/multithread/guavafuture/GuavaFutureTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/netty/ClientChannelInboundHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/netty/ClientChannelInboundHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/netty/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/netty/NettyClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/netty/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/netty/NettyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/netty/ServerChannelInboundHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/netty/ServerChannelInboundHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/notes/2019-8-8 SpringApplication 120205.md" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/notes/2019-8-8 SpringApplication 120205.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/notes/Common Problems.md" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/notes/Common Problems.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/notes/Design Pattern.md" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/notes/Design Pattern.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/notes/IO and NIO.md" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/notes/IO and NIO.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/notes/SpringApplication" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/notes/SpringApplication" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/notes/SpringApplication.md" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/notes/SpringApplication.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/notes/interview" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/notes/interview" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/notes/interview.docx" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/notes/interview.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/notes/netty.md" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/notes/netty.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pictures/epoll.png" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/pictures/epoll.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pictures/nio.eddx" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/pictures/nio.eddx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pictures/select.png" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/pictures/select.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/singleton/DoubleCheckLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/singleton/DoubleCheckLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/singleton/EnumSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/singleton/EnumSingleton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/singleton/Hungry.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/singleton/Hungry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/singleton/Lazy.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/singleton/Lazy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/singleton/StaticBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/singleton/StaticBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/singleton/StaticInnerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/singleton/StaticInnerClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/singleton/SynchronizedLazy.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/singleton/SynchronizedLazy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/EscapeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/EscapeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/TestGC.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/TestGC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/TestReflect.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/TestReflect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/TestThreadPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/TestThreadPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/bytecode/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/bytecode/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/bytecode/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/bytecode/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/bytecode/DeOptimization.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/bytecode/DeOptimization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/bytecode/Dinosaur.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/bytecode/Dinosaur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/bytecode/JavaByteCodeSecret.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/bytecode/JavaByteCodeSecret.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/bytecode/Overload.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/bytecode/Overload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/bytecode/reflection/TestReflection.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/bytecode/reflection/TestReflection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/getRate.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/getRate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/turing/AuthUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/AuthUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/turing/Business.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/turing/Common.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/turing/Data.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/turing/ReqParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/ReqParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/turing/ast/TestAstWs.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/ast/TestAstWs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/turing/iat/IatBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/iat/IatBusiness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/turing/iat/IatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/iat/IatClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/turing/iat/IatData.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/iat/IatData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/turing/iat/TestAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/iat/TestAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/turing/iat/WebIATWS.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/iat/WebIATWS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/turing/ocr/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/ocr/FileUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/turing/ocr/HttpUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/ocr/HttpUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/turing/ocr/idcard.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/ocr/idcard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/turing/tts/TuringWebTTSWs.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/tts/TuringWebTTSWs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sundry/turing/tts/WebTTSWs.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/tts/WebTTSWs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/survey/AudioCut.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/survey/AudioCut.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/survey/EasyDLAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/survey/EasyDLAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/survey/EasyDLEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/survey/EasyDLEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/survey/FinalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/survey/FinalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/survey/LittleEndian.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/survey/LittleEndian.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/survey/LittleEndianConsts.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/survey/LittleEndianConsts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/survey/TDOA/Complex.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/survey/TDOA/Complex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/survey/TDOA/Correlation.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/survey/TDOA/Correlation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/survey/TDOA/FFT.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/survey/TDOA/FFT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/survey/TDOA/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/survey/TDOA/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/survey/correlation/AudioInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/survey/correlation/AudioInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/survey/correlation/CorrResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/survey/correlation/CorrResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/survey/correlation/MyCorrelation.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/survey/correlation/MyCorrelation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/threadpool/HttpIOUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/threadpool/HttpIOUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/threadpool/ScalableThreadPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/threadpool/ScalableThreadPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zookeeper/CuratorNodeCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/zookeeper/CuratorNodeCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zookeeper/DistributedIDGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/zookeeper/DistributedIDGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zookeeper/DistributedLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/zookeeper/DistributedLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zookeeper/Lock.java" beforeDir="false" afterPath="$PROJECT_DIR$/things/src/main/java/com/skaleto/things/zookeeper/Lock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/things/JAVA动态代理-2-李献涛.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/things/JAVA动态代理-3-李献涛.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/things/bookmark/bookmarks_2019_8_2.html" beforeDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="JDKProxyHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/proxy/JDKProxyHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="33" column="56" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#313#314#0" expanded="true" />
-                <element signature="e#343#344#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="$Proxy0.class" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../iflytektest/com/sun/proxy/$Proxy0.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="641">
-              <caret line="78" column="59" selection-start-line="78" selection-start-column="59" selection-end-line="78" selection-end-column="59" />
-              <folding>
-                <element signature="e#0#3012#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Class.java" pinned="false" current-in-tab="false">
-        <entry file="jar://D:/src.zip!/java/lang/Class.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="118" column="19" selection-start-line="118" selection-start-column="19" selection-end-line="118" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Proxy.java" pinned="false" current-in-tab="false">
-        <entry file="jar://D:/src.zip!/java/lang/reflect/Proxy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="418" column="32" selection-start-line="418" selection-start-column="32" selection-end-line="418" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WeakCache.java" pinned="false" current-in-tab="false">
-        <entry file="jar://D:/src.zip!/java/lang/reflect/WeakCache.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="65" column="22" lean-forward="true" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BiFunction.java" pinned="false" current-in-tab="false">
-        <entry file="jar://D:/src.zip!/java/util/function/BiFunction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Reflection.class" pinned="false" current-in-tab="false">
-        <entry file="jar://D:/iflytek/stp/base/env/jdk/jre/lib/rt.jar!/sun/reflect/Reflection.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="System.java" pinned="false" current-in-tab="false">
-        <entry file="jar://D:/src.zip!/java/lang/System.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="332" column="34" selection-start-line="332" selection-start-column="34" selection-end-line="332" selection-end-column="34" />
-              <folding>
-                <element signature="e#11566#11567#0" expanded="true" />
-                <element signature="e#11597#11598#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Objects.java" pinned="false" current-in-tab="false">
-        <entry file="jar://D:/src.zip!/java/util/Objects.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="200" column="24" selection-start-line="200" selection-start-column="24" selection-end-line="200" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>ChannelPipline</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../iflytektest" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/notes/IO and NIO" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/notes/netty" />
-        <option value="$PROJECT_DIR$/src/main/java/netty/NettyTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ioandnio/NIOClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/netty/ChannelInboundHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/netty/ClientChannelInboundHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/netty/NettyClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/netty/ServerChannelInboundHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/map/TestMap.java" />
-        <option value="$PROJECT_DIR$/src/main/java/notes/Common Problems" />
-        <option value="$PROJECT_DIR$/src/main/java/designpattern/SimpleFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designpattern/simplefactory/Character.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designpattern/simplefactory/Tank.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designpattern/simplefactory/DPS.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designpattern/simplefactory/Healer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designpattern/simplefactory/SimpleFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designpattern/factorymethod/TankFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designpattern/factorymethod/Factory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designpattern/factorymethod/DPSFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designpattern/factorymethod/HealerFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/notes/Design Pattern" />
-        <option value="$PROJECT_DIR$/src/main/java/designpattern/SpCharacter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designpattern/SpTank.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designpattern/abstractfactory/IFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designpattern/factory/simplefactory/SimpleFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/designpattern/factory/abstractfactory/TankFactory.java" />
-        <option value="$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/factory/abstractfactory/TankFactory.java" />
-        <option value="$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/builder/IDPS.java" />
-        <option value="$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/builder/Human.java" />
-        <option value="$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/builder/HumanBuilder.java" />
-        <option value="$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/builder/IBuildHuman.java" />
-        <option value="$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/builder/HumanDirector.java" />
-        <option value="$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/strategy/IStrategy.java" />
-        <option value="$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/strategy/RushStrategy.java" />
-        <option value="$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/strategy/SlowStrategy.java" />
-        <option value="$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/strategy/StrategyContext.java" />
-        <option value="$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/observer/DPSObserver.java" />
-        <option value="$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/observer/Observer.java" />
-        <option value="$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/observer/TankObserver.java" />
-        <option value="$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/observer/Subject.java" />
-        <option value="$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/template/HumanTemplate.java" />
-        <option value="$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/template/NewHuman.java" />
-        <option value="$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/proxy/IGamePlayer.java" />
-        <option value="$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/proxy/GamePlayer.java" />
-        <option value="$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/proxy/GamePlayerHandler.java" />
-        <option value="$PROJECT_DIR$/../iflytektest/src/main/java/notes/Design Pattern" />
-        <option value="$PROJECT_DIR$/../iflytektest/src/main/java/ioandnio/NIOClient.java" />
-        <option value="$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/proxy/CglibProxy.java" />
-        <option value="$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/proxy/JDKProxyHandler.java" />
-        <option value="$PROJECT_DIR$/../iflytektest/.gitignore" />
-      </list>
+  <component name="Git.Update.Project.Info.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="iflytek.test" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="createModuleGroups" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
   </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
-  </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>Android</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
-  </component>
+  <component name="ProjectId" id="1RCRnIdsBAoAyGpxBO2thGKlzEa" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="iflytektest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iflytektest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iflytektest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="GoToClass.includeLibraries" value="false" />
@@ -261,160 +331,124 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.17.RELEASE/spring-core-4.3.17.RELEASE-sources.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="options.lastSelected" value="com.genymobile.genymotion.ide.idea.GdmSettings" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.19196428" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java/sundry/working" />
+      <recent name="$PROJECT_DIR$/src/main/java/ioandnio/reactor/multithread" />
+      <recent name="$PROJECT_DIR$/src/main/java/sundry/turing/ocr" />
+      <recent name="$PROJECT_DIR$/src/main/java/sundry/turing/iat" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/multithread/executor" />
       <recent name="E:\iflytektest\things\bookmark" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.skaleto.things" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="sundry.turing.isvp.domain" />
+      <recent name="sundry.turing.tts" />
+      <recent name="zookeeper" />
       <recent name="designpattern" />
       <recent name="netty" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\iflytektest" />
-      <recent name="E:\iflytektest\src\main\java\notes" />
-    </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.JDKProxyHandler">
-    <configuration default="true" type="Applet" factoryName="Applet">
+  <component name="RunManager" selected="Application.MergeSort">
+    <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-    </configuration>
-    <configuration name="CglibProxy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="designpattern.proxy.CglibProxy" />
-      <module name="iflytektest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="designpattern.proxy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="JDKProxyHandler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="designpattern.proxy.JDKProxyHandler" />
-      <module name="iflytektest" />
-      <option name="VM_PARAMETERS" value="-Dsun.misc.ProxyGenerator.saveGeneratedFiles=true" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="designpattern.proxy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="NIOClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ioandnio.NIOClient" />
-      <module name="iflytektest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ioandnio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="NettyClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="netty.NettyClient" />
-      <module name="iflytektest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="netty.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="NettyServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="netty.NettyServer" />
-      <module name="iflytektest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="netty.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <properties />
-      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
+    <configuration name="MergeSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.skaleto.things.multithread.forkjoin.MergeSort" />
+      <module name="things" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApplicationService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="kafka-producer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.skaleto.kafka.ApplicationService" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThingsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="things" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.skaleto.things.ThingsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.NIOClient" />
-      <item itemvalue="Application.NettyServer" />
-      <item itemvalue="Application.NettyClient" />
-      <item itemvalue="Application.CglibProxy" />
-      <item itemvalue="Application.JDKProxyHandler" />
+      <item itemvalue="Application.MergeSort" />
+      <item itemvalue="Spring Boot.ThingsApplication" />
+      <item itemvalue="Spring Boot.ApplicationService" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JDKProxyHandler" />
-        <item itemvalue="Application.CglibProxy" />
-        <item itemvalue="Application.NettyClient" />
-        <item itemvalue="Application.NettyServer" />
-        <item itemvalue="Application.NIOClient" />
+        <item itemvalue="Application.MergeSort" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration>$USER_HOME$/.subversion</configuration>
   </component>
@@ -427,6 +461,120 @@
       <updated>1564478609468</updated>
       <workItem from="1564478611133" duration="34673000" />
       <workItem from="1564647038824" duration="20344000" />
+      <workItem from="1569169257900" duration="1448000" />
+      <workItem from="1569170735034" duration="51000" />
+      <workItem from="1569170795461" duration="267000" />
+      <workItem from="1569171238004" duration="916000" />
+      <workItem from="1569172497097" duration="509000" />
+      <workItem from="1569919149375" duration="17904000" />
+      <workItem from="1571591482762" duration="3700000" />
+      <workItem from="1571760772611" duration="15610000" />
+      <workItem from="1573375285166" duration="636000" />
+      <workItem from="1574007958066" duration="2082000" />
+      <workItem from="1578238489522" duration="507000" />
+      <workItem from="1578240489281" duration="339000" />
+      <workItem from="1579762343379" duration="130000" />
+      <workItem from="1579772792454" duration="39000" />
+      <workItem from="1579772845175" duration="12915000" />
+      <workItem from="1580300635202" duration="4900000" />
+      <workItem from="1580627645975" duration="330000" />
+      <workItem from="1580628257467" duration="4692000" />
+      <workItem from="1580729678490" duration="1926000" />
+      <workItem from="1580893027521" duration="733000" />
+      <workItem from="1581041187657" duration="660000" />
+      <workItem from="1581422475650" duration="3700000" />
+      <workItem from="1581599909057" duration="1434000" />
+      <workItem from="1581842052006" duration="2602000" />
+      <workItem from="1582267799895" duration="305000" />
+      <workItem from="1583743888297" duration="1065000" />
+      <workItem from="1583808921333" duration="308000" />
+      <workItem from="1583809409032" duration="398000" />
+      <workItem from="1584068620402" duration="433000" />
+      <workItem from="1584321661702" duration="904000" />
+      <workItem from="1584325134345" duration="1101000" />
+      <workItem from="1585020478430" duration="6465000" />
+      <workItem from="1585187284686" duration="3167000" />
+      <workItem from="1586188429258" duration="1024000" />
+      <workItem from="1586280284827" duration="762000" />
+      <workItem from="1586939339431" duration="16889000" />
+      <workItem from="1587461254163" duration="2961000" />
+      <workItem from="1588222713962" duration="2386000" />
+      <workItem from="1588490052809" duration="2291000" />
+      <workItem from="1588766290773" duration="11597000" />
+      <workItem from="1588930462846" duration="5704000" />
+      <workItem from="1588997088314" duration="1851000" />
+      <workItem from="1589006608138" duration="23510000" />
+      <workItem from="1589303845589" duration="5182000" />
+      <workItem from="1589768240206" duration="2026000" />
+      <workItem from="1589860638136" duration="13919000" />
+      <workItem from="1590332557304" duration="15187000" />
+      <workItem from="1590550674619" duration="1057000" />
+      <workItem from="1590665216471" duration="622000" />
+      <workItem from="1590732930596" duration="2035000" />
+      <workItem from="1590997896074" duration="7437000" />
+      <workItem from="1591335991118" duration="1669000" />
+      <workItem from="1592737029736" duration="32039000" />
+      <workItem from="1593423936610" duration="258000" />
+      <workItem from="1593424285581" duration="5055000" />
+      <workItem from="1594015517924" duration="225000" />
+      <workItem from="1594019560288" duration="38027000" />
+      <workItem from="1594605769777" duration="6734000" />
+      <workItem from="1596436542234" duration="917000" />
+      <workItem from="1596450411563" duration="174000" />
+      <workItem from="1596639239586" duration="495000" />
+      <workItem from="1596958923387" duration="1004000" />
+      <workItem from="1597040885680" duration="1305000" />
+      <workItem from="1597321473442" duration="3516000" />
+      <workItem from="1597550948952" duration="17000" />
+      <workItem from="1597661777804" duration="925000" />
+      <workItem from="1597838338403" duration="32467000" />
+      <workItem from="1598320556312" duration="6775000" />
+      <workItem from="1598858330631" duration="691000" />
+      <workItem from="1598944337676" duration="5844000" />
+      <workItem from="1600604365328" duration="4106000" />
+      <workItem from="1600940658859" duration="2275000" />
+      <workItem from="1601369182517" duration="5000" />
+      <workItem from="1601458301799" duration="10000" />
+      <workItem from="1602660131363" duration="273000" />
+      <workItem from="1603073260843" duration="2327000" />
+      <workItem from="1603713809064" duration="15000" />
+      <workItem from="1605691876228" duration="540000" />
+      <workItem from="1609313888658" duration="2208000" />
+      <workItem from="1609727596463" duration="443000" />
+      <workItem from="1609728141990" duration="28000" />
+      <workItem from="1609728183329" duration="201000" />
+      <workItem from="1610680976794" duration="235000" />
+      <workItem from="1611134509221" duration="18000" />
+      <workItem from="1611134561990" duration="1133000" />
+      <workItem from="1611554016129" duration="347000" />
+      <workItem from="1614068462318" duration="227000" />
+      <workItem from="1615787763075" duration="263000" />
+      <workItem from="1620984300104" duration="4962000" />
+      <workItem from="1621404600706" duration="4160000" />
+      <workItem from="1621526505527" duration="22032000" />
+      <workItem from="1621912092145" duration="2155000" />
+      <workItem from="1621998878233" duration="10585000" />
+      <workItem from="1622993353024" duration="2879000" />
+      <workItem from="1623079776711" duration="2147000" />
+      <workItem from="1623677219045" duration="444000" />
+      <workItem from="1624367240068" duration="730000" />
+      <workItem from="1624590825584" duration="4000" />
+      <workItem from="1628176634161" duration="2941000" />
+      <workItem from="1628490646762" duration="2253000" />
+      <workItem from="1628495707465" duration="586000" />
+      <workItem from="1629343528194" duration="428000" />
+      <workItem from="1629444829789" duration="213000" />
+      <workItem from="1632364724568" duration="3441000" />
+      <workItem from="1632745207812" duration="3251000" />
+      <workItem from="1632918511310" duration="1142000" />
+      <workItem from="1632971934455" duration="58000" />
+      <workItem from="1634124337317" duration="1429000" />
+      <workItem from="1635129285719" duration="11967000" />
+      <workItem from="1635402036295" duration="7201000" />
+      <workItem from="1635911457270" duration="871000" />
+      <workItem from="1636013030608" duration="25000" />
+      <workItem from="1636298808959" duration="1067000" />
+      <workItem from="1636376339500" duration="2909000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <created>1564735053624</created>
@@ -435,660 +583,301 @@
       <option name="project" value="LOCAL" />
       <updated>1564735053624</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2019年10月10日01:29:41">
+      <created>1570642188590</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1570642188590</updated>
+    </task>
+    <task id="LOCAL-00003" summary="2019年10月21日01:15:20">
+      <created>1571591728902</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571591728902</updated>
+    </task>
+    <task id="LOCAL-00004" summary="2019年10月23日01:04:09">
+      <created>1571763857201</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1571763857201</updated>
+    </task>
+    <task id="LOCAL-00005" summary="2020年01月23日14:54:01">
+      <created>1579762452905</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1579762452905</updated>
+    </task>
+    <task id="LOCAL-00006" summary="2020年05月28日19:37:36">
+      <created>1590665876096</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1590665876096</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55017000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32995737" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.15005599" />
-      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.25531915" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.27964205" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
+    <MESSAGE value="2019年10月10日01:29:41" />
+    <MESSAGE value="2019年10月21日01:15:20" />
+    <MESSAGE value="2019年10月23日01:04:09" />
+    <MESSAGE value="2020年01月23日14:54:01" />
+    <MESSAGE value="2020年05月28日19:37:36" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020年05月28日19:37:36" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/netty/ServerChannelInboundHandler.java</url>
-          <line>18</line>
-          <properties />
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/netty/ServerChannelInboundHandler.java</url>
+          <line>26</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/netty/ClientChannelInboundHandler.java</url>
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/netty/ClientChannelInboundHandler.java</url>
           <line>19</line>
-          <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/netty/ClientChannelInboundHandler.java</url>
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/netty/ClientChannelInboundHandler.java</url>
           <line>31</line>
-          <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/proxy/CglibProxy.java</url>
           <line>38</line>
-          <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/proxy/CglibProxy.java</url>
           <line>23</line>
-          <properties />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/ioandnio/NIOServer.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/ioandnio/NIOServer.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/EscapeTest.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/tts/TuringWebTTSWs.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/iat/WebIATWS.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/iat/WebIATWS.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/iat/WebIATWS.java</url>
+          <line>172</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/threadpool/ScalableThreadPool.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/ast/TestAstWs.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/leet/Q2.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/java100/TestGeneric.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/leet/Q4.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/leet/Q42.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/leet/Q42.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/tts/TuringWebTTSWs.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/tts/TuringWebTTSWs.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/tts/v2/TuringTTSTest.java</url>
+          <line>143</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/isvp/TuringISVPTest.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/isvp/TuringISVPTest.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/isvp/TuringISVPTest.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/isvp/TuringISVPTest.java</url>
+          <line>119</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/isvp/TuringISVPTest.java</url>
+          <line>139</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/isvp/TuringISVPTest.java</url>
+          <line>97</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/uts/TuringUTSTest.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/turing/uts/TuringUTSTest.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/spring/TestCirculor.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/websocket/TestWs.java</url>
+          <line>1</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/5.3.5/spring-tx-5.3.5-sources.jar!/org/springframework/transaction/annotation/TransactionManagementConfigurationSelector.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/ioandnio/reactor/singlethread/SingleThreadReactorOutboundHandler.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/ioandnio/reactor/multithread/MultiThreadReactorAcceptor.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/ioandnio/reactor/multithread/MultiThreadReactorAcceptor.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/ioandnio/reactor/multithread/MultiThreadReactorInboundHandler.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="110" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/ioandnio/reactor/multithread/MultiThreadSubReactor.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/netty/TestByteBuf.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.11.Final/netty-all-4.1.11.Final-sources.jar!/io/netty/buffer/ByteBufUtil.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/TestThread.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="114" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/working/ScapyUtil.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="115" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/things/src/main/java/com/skaleto/things/sundry/working/DataScreen.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="16" />
     </breakpoint-manager>
   </component>
-  <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.11.Final/netty-all-4.1.11.Final-sources.jar!/io/netty/channel/AbstractChannelHandlerContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="380" column="16" lean-forward="true" selection-start-line="380" selection-start-column="16" selection-end-line="380" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/factorymethod.java" />
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/factory/factorymethod/DPSFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#226#227#0" expanded="true" />
-            <element signature="e#253#254#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/factory/simplefactory/SimpleFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/factory/Healer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/factory/Tank.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/factory/abstractfactory/IFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/factory/factorymethod/TankFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/factory/factorymethod/Factory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/factory/abstractfactory/TankFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/factory/SpTank.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/factory/factorymethod/HealerFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/factory/SpCharacter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/factory/DPS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#266#267#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/builder/Human.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/builder/IBuildHuman.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/builder/HumanBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-          <folding>
-            <element signature="e#200#201#0" expanded="true" />
-            <element signature="e#231#232#0" expanded="true" />
-            <element signature="e#264#265#0" expanded="true" />
-            <element signature="e#295#296#0" expanded="true" />
-            <element signature="e#328#329#0" expanded="true" />
-            <element signature="e#359#360#0" expanded="true" />
-            <element signature="e#392#393#0" expanded="true" />
-            <element signature="e#420#421#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/builder/HumanDirector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="e#370#371#0" expanded="true" />
-            <element signature="e#390#391#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/strategy/IStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/strategy/RushStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding>
-            <element signature="e#164#165#0" expanded="true" />
-            <element signature="e#186#187#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/strategy/SlowStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-          <folding>
-            <element signature="e#164#165#0" expanded="true" />
-            <element signature="e#186#187#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/strategy/StrategyContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-          <folding>
-            <element signature="e#194#195#0" expanded="true" />
-            <element signature="e#234#235#0" expanded="true" />
-            <element signature="e#295#296#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/observer/DPSObserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/observer/TankObserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="42" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="42" />
-          <folding>
-            <element signature="e#180#181#0" expanded="true" />
-            <element signature="e#202#203#0" expanded="true" />
-            <element signature="e#250#251#0" expanded="true" />
-            <element signature="e#286#287#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/observer/Observer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/observer/Subject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#208#218#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/factory/Character.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/template/HumanTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/template/NewHuman.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding>
-            <element signature="e#238#239#0" expanded="true" />
-            <element signature="e#269#270#0" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#326#327#0" expanded="true" />
-            <element signature="e#374#375#0" expanded="true" />
-            <element signature="e#405#406#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/src.zip!/java/lang/reflect/InvocationHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.17.RELEASE/spring-core-4.3.17.RELEASE.jar!/org/springframework/cglib/proxy/MethodInterceptor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/notes/Design Pattern">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="301">
-            <caret line="141" column="44" selection-start-line="141" selection-start-column="44" selection-end-line="141" selection-end-column="44" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/netty/ClientChannelInboundHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/iflytek/stp/base/env/jdk/jre/lib/rt.jar!/sun/util/calendar/AbstractCalendar.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/ioandnio/NIOClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.17.RELEASE/spring-core-4.3.17.RELEASE.jar!/org/springframework/cglib/core/AbstractClassGenerator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.17.RELEASE/spring-core-4.3.17.RELEASE.jar!/org/springframework/cglib/proxy/Enhancer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="974" selection-start-line="974" selection-end-line="974" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/proxy/CglibProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="32" column="60" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#358#359#0" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/proxy/GamePlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#269#270#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/proxy/IGamePlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/src/main/java/designpattern/proxy/JDKProxyHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="33" column="56" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-            <element signature="e#343#344#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/src.zip!/java/util/Objects.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="200" column="24" selection-start-line="200" selection-start-column="24" selection-end-line="200" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/src.zip!/java/lang/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="332" column="34" selection-start-line="332" selection-start-column="34" selection-end-line="332" selection-end-column="34" />
-          <folding>
-            <element signature="e#11566#11567#0" expanded="true" />
-            <element signature="e#11597#11598#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="118" column="19" selection-start-line="118" selection-start-column="19" selection-end-line="118" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/iflytek/stp/base/env/jdk/jre/lib/rt.jar!/sun/reflect/Reflection.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/src.zip!/java/lang/reflect/Proxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="418" column="32" selection-start-line="418" selection-start-column="32" selection-end-line="418" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/src.zip!/java/lang/reflect/WeakCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="65" column="22" lean-forward="true" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/src.zip!/java/util/function/BiFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../iflytektest/com/sun/proxy/$Proxy0.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
-          <caret line="78" column="59" selection-start-line="78" selection-start-column="59" selection-end-line="78" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#3012#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.19196428" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.19196428" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.19196428" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>iflytektest</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.19196428" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: io.netty:netty-all:4.1.11.Final</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.19196428" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
