@@ -66,6 +66,23 @@ public class TestThreadPool {
 
     }
 
+
+    public static class Test2 {
+        public static void main(String[] args) {
+            A a =  new A();
+            System.out.println("（1）调用change前"+a);
+            change(a);
+            System.out.println("（3）调用change后"+a);
+        }
+        public static void change(A a){
+            a= new A();
+            System.out.println("（2）change方法内"+a);
+        }
+    }
+    static class A{
+    }
+
+
 }
 
 

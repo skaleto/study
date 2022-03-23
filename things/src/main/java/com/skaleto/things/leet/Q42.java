@@ -20,66 +20,53 @@ import java.util.Stack;
  */
 public class Q42 {
 
-    /**
-     * 单调栈法
-     */
-    Stack<Integer> tmp = new Stack<>();
-
-    public int trap1(int[] height) {
-        int res = 0;
+    public int trap(int[] height) {
+        //如果遍历到的当前数字cur小于等于栈顶元素top，则入栈，否侧出栈
+        //如果出栈,记为poped元素，则使用Math.min(top,cur)-poped作为高，cur-top-1作为长度
+        //再循环比较新的栈顶元素是否小于等于当前元素，满足则继续出栈，计算面积，否则结束
+        Stack<Integer> mono = new Stack<>();
+        int area = 0;
         for (int i = 0; i < height.length; i++) {
-            while (!tmp.isEmpty() && height[i] > height[tmp.peek()]) {
-                int cur = tmp.pop();
-                if (!tmp.isEmpty()) {
-                    int distance = i - tmp.peek() - 1;
-                    int diff = Math.min(height[i], height[tmp.peek()]) - height[cur];
-                    res += distance * diff;
+            while (!mono.isEmpty() && height[mono.peek()] <= height[i]) {
+                int poped = mono.pop();
+                if (mono.isEmpty()) {
+                    break;
                 }
+                int top = mono.peek();
+                int h = Math.min(height[i], height[top]) - height[poped];
+                area += h * (i - top - 1);
             }
-            tmp.push(i);
-
+            mono.push(i);
         }
-        return res;
-
+        return area;
     }
 
-    /**
-     * 双指针法，当左边小于右边时，结果由左边max决定
-     * ps.这个方法太巧妙了不由得发出感叹
-     *
-     * @param height
-     * @return
-     */
     public int trap2(int[] height) {
-        int left = 0;
-        int right = height.length - 1;
-        int res = 0;
-        int leftMax = 0;
-        int rightMax = 0;
-        while (left < right) {
-            if (height[left] < height[right]) {
-                if (height[left] >= leftMax) {
-                    leftMax = height[left];
-                } else {
-                    res += leftMax - height[left];
-                }
+        int left=0;
+        int right=height.length-1;
+
+        int leftMax=height[left];
+        int rightMax=height[right];
+
+        int area=0;
+        while(left<right){
+            leftMax=Math.max(leftMax,height[left]);
+            rightMax=Math.max(rightMax,height[right]);
+
+            if(leftMax<=rightMax){
+                area+=leftMax-height[left];
                 left++;
-            } else {
-                if (height[right] >= rightMax) {
-                    rightMax = height[right];
-                } else {
-                    res += rightMax - height[right];
-                }
+            }else{
+                area+=rightMax-height[right];
                 right--;
             }
         }
-
-        return res;
+        return area;
     }
 
     public static void main(String[] args) {
         Q42 q = new Q42();
-        System.out.println(q.trap2(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}));
+        System.out.println(q.trap(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}));
 
     }
 }

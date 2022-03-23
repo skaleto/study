@@ -16,20 +16,24 @@ import java.util.Map;
  */
 public class Q3 {
 
+    public static void main(String[] args) {
+        Q3 q=new Q3();
+        System.out.println(q.lengthOfLongestSubstring("abba"));
+    }
+
     public int lengthOfLongestSubstring(String s) {
         Map<Character, Integer> map = new HashMap<>();
         int maxLen = 0;
         int left = 0;
-        int right = 0;
 
         char[] c = s.toCharArray();
         for (int i = 0; i < c.length; i++) {
-            if (map.containsKey(c[right])) {
-                left = Math.max(left, map.get(c[right]) + 1);
+            if (map.containsKey(c[i])) {
+//                left = Math.max(left, map.get(c[i]) + 1);
+                left= map.get(c[i]) + 1;
             }
-            map.put(c[right], i);
-            maxLen = Math.max(maxLen, right - left + 1);
-            right++;
+            map.put(c[i], i);
+            maxLen = Math.max(maxLen, i - left + 1);
         }
 
         return maxLen;

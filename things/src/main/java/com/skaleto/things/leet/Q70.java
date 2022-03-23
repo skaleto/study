@@ -22,4 +22,25 @@ public class Q70 {
         }
         return f3;
     }
+
+    public int climbStairs_20220110(int n) {
+        /**
+         * 第n阶要么从第n-1阶走1阶到达，要么从第n-2阶走2阶到达
+         *
+         * dp[n]=dp[n-1]+dp[n-2];
+         */
+
+        int[] dp=new int[n+1];
+
+        //第0阶不用走就能到达，有一种走法那就是走0不
+        dp[0]=1;
+        dp[1]=1;
+
+        for(int i=2;i<=n;i++){
+            dp[i]=dp[i-1]+dp[i-2];
+        }
+
+        return dp[n];
+
+    }
 }
