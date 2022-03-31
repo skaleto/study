@@ -23,6 +23,12 @@ public class Q116 {
     }
 
 
+    /**
+     * Your runtime beats 68.6 % of java submissions
+     * Your memory usage beats 34.54 % of java submissions (41.5 MB)
+     * @param root
+     * @return
+     */
     public Node connect(Node root) {
         if (root == null) {
             return null;

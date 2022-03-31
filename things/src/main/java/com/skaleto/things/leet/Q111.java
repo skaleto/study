@@ -42,6 +42,30 @@ public class Q111 {
 
     }
 
+
+    /**
+     * Your runtime beats 24.52 % of java submissions
+     * Your memory usage beats 12.62 % of java submissions (61.3 MB)
+     * @param root
+     * @return
+     */
+    public int minDepth_20220324(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+
+        if (root.left == null) {
+            return minDepth(root.right) + 1;
+        }
+
+        if (root.right == null) {
+            return minDepth(root.left) + 1;
+        }
+
+
+        return 1 + Math.min(minDepth(root.left), minDepth(root.right));
+    }
+
     public class TreeNode {
         int val;
         TreeNode left;

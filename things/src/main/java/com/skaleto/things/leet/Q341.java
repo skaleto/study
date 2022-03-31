@@ -2,6 +2,7 @@ package com.skaleto.things.leet;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -54,6 +55,37 @@ public class Q341 {
         @Override
         public boolean hasNext() {
             return iterator.hasNext();
+        }
+    }
+
+
+    /**
+     * 迭代器惰性求值，不用一开始就把所有元素就存起来，减少内存占用
+     */
+    public static class NestedIterator2 implements Iterator<Integer> {
+
+        LinkedList<NestedInteger> data = null;
+
+        public NestedIterator2(List<NestedInteger> nestedList) {
+            data = new LinkedList<>(nestedList);
+        }
+
+        @Override
+        public Integer next() {
+            return data.remove(0).getInteger();
+        }
+
+        @Override
+        public boolean hasNext() {
+            while (!data.isEmpty() && !data.get(0).isInteger()) {
+                List<NestedInteger> list = data.remove(0).getList();
+                //这里倒序添加的原因是循环内会addFirst操作（后一个在前一个前方加入），如果顺序添加，会导致原来的顺序被颠倒
+                for (int i = list.size() - 1; i >= 0; i--) {
+                    data.addFirst(list.get(i));
+                }
+            }
+
+            return !data.isEmpty();
         }
     }
 
